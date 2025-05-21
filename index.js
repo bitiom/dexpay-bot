@@ -13,7 +13,10 @@ bot.onText(/\/start (.+)/, (msg, match) => {
     reply_markup: {
       inline_keyboard: [
         [
-          { text: 'پرداخت', url: paymentUrl }
+          {
+            text: 'پرداخت',
+            web_app: { url: paymentUrl } // 👈 باز شدن به صورت Mini App
+          }
         ]
       ]
     }
